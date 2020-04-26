@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200426 13:37:08.517" generator="Rebot 3.1.2 (Python 2.7.15 on win32)">
+<suite source="C:\Automation\Web_Project_Automation" id="s1" name="Web Project Automation">
+<suite source="C:\Automation\Web_Project_Automation\eBAY" id="s1-s1" name="eBAY">
+<suite source="C:\Automation\Web_Project_Automation\eBAY\TestSuites" id="s1-s1-s1" name="TestSuites">
+<suite source="C:\Automation\Web_Project_Automation\eBAY\TestSuites\Purchase.robot" id="s1-s1-s1-s1" name="Purchase">
+<test id="s1-s1-s1-s1-t1" name="Verify that user is able to login and purchase an item from eBAY">
+<kw type="setup" name="Base web test setup" library="Common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200426 13:36:50.661" level="INFO">Opening browser 'CHROME' to base url 'about:blank'.</msg>
+<status status="PASS" endtime="20200426 13:36:53.545" starttime="20200426 13:36:50.660"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20200426 13:36:54.673" starttime="20200426 13:36:53.545"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" endtime="20200426 13:36:54.673" starttime="20200426 13:36:54.673"></status>
+</kw>
+<status status="PASS" endtime="20200426 13:36:54.673" starttime="20200426 13:36:50.660"></status>
+</kw>
+<kw name="Given the user opens eBAY application" library="BDDKeywords">
+<kw name="the user launches eBAY app" library="Common">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${EBAY_LOGIN_URL}</arg>
+</arguments>
+<msg timestamp="20200426 13:36:54.675" level="INFO">Opening url 'https://www.ebay.com.au/'</msg>
+<status status="PASS" endtime="20200426 13:36:57.923" starttime="20200426 13:36:54.674"></status>
+</kw>
+<status status="PASS" endtime="20200426 13:36:57.923" starttime="20200426 13:36:54.674"></status>
+</kw>
+<status status="PASS" endtime="20200426 13:36:57.923" starttime="20200426 13:36:54.674"></status>
+</kw>
+<kw name="And the user logs in eBAY with valid username and password" library="BDDKeywords">
+<kw name="the user clicks on sign in" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LINK_Sign_In}</arg>
+</arguments>
+<msg timestamp="20200426 13:36:57.925" level="INFO">Clicking element 'xpath=//a[text()='Sign in']'.</msg>
+<status status="PASS" endtime="20200426 13:37:00.700" starttime="20200426 13:36:57.924"></status>
+</kw>
+<status status="PASS" endtime="20200426 13:37:00.700" starttime="20200426 13:36:57.924"></status>
+</kw>
+<kw name="the user enters username" library="LoginPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TEXT_Username}</arg>
+<arg>${LOGIN_USERNAME}</arg>
+</arguments>
+<msg timestamp="20200426 13:37:00.701" level="INFO">Typing text 'ps.dummy.ebay@gmail.com' into text field 'id=userid'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200426 13:37:04.952" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Web Project Automation.eBAY.TestSuites.Purchase-selenium-screenshot-1.png"&gt;&lt;img src="Web Project Automation.eBAY.TestSuites.Purchase-selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200426 13:37:04.952" starttime="20200426 13:37:03.536"></status>
+</kw>
+<msg timestamp="20200426 13:37:04.958" level="FAIL">Element with locator 'id=userid' not found.</msg>
+<status status="FAIL" endtime="20200426 13:37:04.958" starttime="20200426 13:37:00.700"></status>
+</kw>
+<status status="FAIL" endtime="20200426 13:37:04.958" starttime="20200426 13:37:00.700"></status>
+</kw>
+<status status="FAIL" endtime="20200426 13:37:04.958" starttime="20200426 13:36:57.924"></status>
+</kw>
+<kw type="teardown" name="Base web test teardown" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20200426 13:37:08.208" starttime="20200426 13:37:04.959"></status>
+</kw>
+<status status="PASS" endtime="20200426 13:37:08.208" starttime="20200426 13:37:04.958"></status>
+</kw>
+<tags>
+<tag>login_addCart</tag>
+</tags>
+<status status="FAIL" endtime="20200426 13:37:08.208" critical="yes" starttime="20200426 13:36:50.659">Element with locator 'id=userid' not found.</status>
+</test>
+<status status="FAIL" endtime="20200426 13:37:08.209" starttime="20200426 13:36:49.964"></status>
+</suite>
+<status status="FAIL" endtime="20200426 13:37:08.210" starttime="20200426 13:36:49.962"></status>
+</suite>
+<status status="FAIL" endtime="20200426 13:37:08.211" starttime="20200426 13:36:49.959"></status>
+</suite>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 1 executions.</doc>
+<status status="FAIL" endtime="20200426 13:37:08.212" starttime="20200426 13:36:49.929"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">login_addCart</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Web Project Automation" pass="0">Web Project Automation</stat>
+<stat fail="1" id="s1-s1" name="eBAY" pass="0">Web Project Automation.eBAY</stat>
+<stat fail="1" id="s1-s1-s1" name="TestSuites" pass="0">Web Project Automation.eBAY.TestSuites</stat>
+<stat fail="1" id="s1-s1-s1-s1" name="Purchase" pass="0">Web Project Automation.eBAY.TestSuites.Purchase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
