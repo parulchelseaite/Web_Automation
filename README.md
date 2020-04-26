@@ -48,8 +48,8 @@ Yes. For ex, the test failed when eBAY started asking for CAPTCHA as below
 
 ![Alt text](Results/Failed_Screenshot_1.png?raw=true "Optional Title")
 
-
 **Snapshot of how a project structure looks like?**
+
 ![Alt text](Results/Images/Project_Structure.png?raw=true "Optional Title")
 
 
